@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         论坛快捷回复
 // @namespace    NewFly
-// @version      1.2
+// @version      1.4
 // @description  暂时只支持科学刀论坛快捷回复
 // @author       NewFly
-// @match        https://www.kxdao.net/thread*.html
+// @match        https://www.kxdao.net/*
 // @grant        none
 // ==/UserScript==
 
@@ -27,7 +27,7 @@ window.writetext = function (){
 window.clicksubmitbutton = function (){
     document.getElementById("postsubmit").click();
 }
-document.getElementById("post_reply").insertAdjacentHTML("afterEnd",'<input type="button" value="快捷回复" style="width:80px;height:33px;" onclick="autoreply()"></input>');
+document.getElementById("scrolltop").insertAdjacentHTML("afterEnd",'<div id="scrolltop" style="width:180px;height:180px;left: 5%; right: auto; visibility: visible;"><input type="button" value="快捷回复" style="color:#F00;font-size:40px;width:170px;height:170px;" onclick="autoreply()"></div>');
 
 
 
